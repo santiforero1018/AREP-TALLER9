@@ -4,11 +4,11 @@ from langchain.prompts import PromptTemplate
 
 import os
 
-os.environ["OPENAI_API_KEY"] = "sk-proj-Hc8d6YYvL622muzmCnOvT3BlbkFJiJPiJDhzjS5J36vFQcaj"
+os.environ["OPENAI_API_KEY"] = ""
 
 template = """Question: {question}
 
-Answer: Let's think step by step."""
+Answer: Let's think step by step.""" 
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
 
