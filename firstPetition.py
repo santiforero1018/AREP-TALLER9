@@ -8,7 +8,7 @@ os.environ["OPENAI_API_KEY"] = ""
 
 template = """Question: {question}
 
-Answer: Let's think step by step.""" 
+Answer: Let's think step by step."""
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
 
