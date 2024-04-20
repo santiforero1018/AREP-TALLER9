@@ -5,12 +5,12 @@ from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, PodSpec
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["PINECONE_API_KEY"] = "eb0f1c59-78f7-4e47-9017-87941c145474"
+os.environ["OPENAI_API_KEY"] = "API_KEY_OPENAI"
+os.environ["PINECONE_API_KEY"] = "API_KEY_PINECONE"
 os.environ["PINECONE_ENV"] = "gcp-starter"
 
 def loadText():
-    loader = TextLoader("Conocimiento.txt")
+    loader = TextLoader("result.txt")
     documents = loader.load()
     #text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 
@@ -59,10 +59,10 @@ def search():
     # if you already have an index, you can load it like this
     docsearch = PineconeVectorStore.from_existing_index(index_name, embeddings)
 
-    query = "What is a distributed pointcut"
+    query = "who is cristiano ronaldo"
     docs = docsearch.similarity_search(query)
 
     print(docs[0].page_content)
 
-#loadText()
+loadText()
 search()

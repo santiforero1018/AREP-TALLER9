@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 
 import os
 
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = "API_KEY_OPENAI"
 
 template = """Question: {question}
 
